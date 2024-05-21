@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=BioRhyme+Expanded:wght@200;300;400;700;800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100vw;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  justify-content: space-between;
+  height: 100%;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.footer {
+  font-size: 1.2rem;
+}
+
+.clock {
+  height: 80vh;
+  width: 80vh;
+  background-color: cornsilk;
+  border: 2px solid darkslateblue;
+  border-radius: 100%;
+  position: relative;
+}
+.clock__number {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  font-family: "BioRhyme Expanded", serif;
+  font-weight: 800;
+  font-style: normal;
+  background-color: cornsilk;
+  z-index: 10;
+}
+.clock__number__12 {
+  top: calc(50% - 1rem - 35vh);
+  left: calc(50% - 1rem);
+}
+.clock__number__01 {
+  top: calc(50% - 1rem - 30.31vh);
+  left: calc(50% - 1rem + 17.5vh);
+}
+.clock__number__02 {
+  top: calc(50% - 1rem - 17.5vh);
+  left: calc(50% - 1rem + 30.31vh);
+}
+.clock__number__03 {
+  top: calc(50% - 1rem);
+  left: calc(50% - 1rem + 35vh);
+}
+.clock__number__04 {
+  top: calc(50% - 1rem + 17.5vh);
+  left: calc(50% - 1rem + 30.31vh);
+}
+.clock__number__05 {
+  top: calc(50% - 1rem + 30.31vh);
+  left: calc(50% - 1rem + 17.5vh);
+}
+.clock__number__06 {
+  top: calc(50% - 1rem + 35vh);
+  left: calc(50% - 1rem);
+}
+.clock__number__07 {
+  top: calc(50% - 1rem + 30.31vh);
+  left: calc(50% - 1rem - 17.5vh);
+}
+.clock__number__08 {
+  top: calc(50% - 1rem + 17.5vh);
+  left: calc(50% - 1rem - 30.31vh);
+}
+.clock__number__09 {
+  left: calc(50% - 1rem - 35vh);
+  top: calc(50% - 1rem);
+}
+.clock__number__10 {
+  top: calc(50% - 1rem - 17.5vh);
+  left: calc(50% - 1rem - 30.31vh);
+}
+.clock__number__11 {
+  top: calc(50% - 1rem - 30.31vh);
+  left: calc(50% - 1rem - 17.5vh);
+}
+.clock__center {
+  width: 2rem;
+  height: 2rem;
+  background-color: brown;
+  position: absolute;
+  top: calc(50% - 1rem);
+  left: calc(50% - 1rem);
+  border-radius: 100%;
+}
+.clock__seconds-center {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 100%;
+  background-color: black;
+  position: absolute;
+  top: calc(50% - 0.5rem);
+  left: calc(50% - 0.5rem);
+}
+.clock__brace__seconds {
+  height: 37vh;
+  width: 0.2rem;
+  background-color: black;
+  position: absolute;
+  bottom: calc(50% - 2rem);
+  left: calc(50% - 0.2rem);
+  transform: rotate(0deg);
+  transform-origin: 0.1rem calc(100% - 2rem);
+}
+.clock__brace__minutes {
+  height: 35vh;
+  width: 0.4rem;
+  background-color: brown;
+  position: absolute;
+  bottom: calc(50% - 2rem);
+  left: calc(50% - 0.2rem);
+  transform: rotate(0deg);
+  transform-origin: 0.2rem calc(100% - 2rem);
+}
+.clock__brace__hours {
+  height: 28vh;
+  width: 0.6rem;
+  background-color: brown;
+  position: absolute;
+  bottom: calc(50% - 2rem);
+  left: calc(50% - 0.3rem);
+  transform: rotate(0deg);
+  transform-origin: 0.3rem calc(100% - 2rem);
+}
+.clock .mark-container {
+  position: absolute;
+  bottom: 50%;
+  left: calc(50% - 0.2rem);
+  width: 0.4rem;
+  height: calc(35vh + 0.2rem);
+  transform-origin: 0.2rem 100%;
+}
+.clock .mark {
+  width: 100%;
+  height: 0.4rem;
+  border-radius: 100%;
+  background-color: darkslateblue;
+}
+
+.current {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  height: 5rem;
+  width: 100%;
+}
+
+/*# sourceMappingURL=index.css.map */

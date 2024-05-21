@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=BioRhyme+Expanded:wght@200;300;400;700;800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: sans-serif;
+}
+
+body {
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;
+
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    justify-content: space-between;
+    height: 100%;
+}
+
+//.top {}
+
+.main {
+    flex-grow: 1;
+}
+
+.footer {
+    font-size: 1.2rem;
+}
+
+$radius: calc(70vh / 2);
+$braceSecondslength: 37vh;
+$braceMinuteslength: 35vh;
+$braceHourslength: 28vh;
+
+.clock {
+    height: 80vh;
+    width: 80vh;
+    background-color: cornsilk;
+    border: 2px solid darkslateblue;
+    border-radius: 100%;
+    position: relative;
+
+    &__number {
+        $size: 2rem;
+        $cos30: 0.866;
+        $sin30: 0.5;
+        $cos60: 0.5;
+        $sin60: 0.866;
+        position: absolute;
+
+        width: $size;
+        height: $size;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 1.8rem;
+
+        font-family: "BioRhyme Expanded", serif;
+        font-weight: 800;
+        font-style: normal;
+
+        background-color: cornsilk;
+        z-index: 10;
+
+        &__12 {
+            top: calc(50% - $size/2 - ($radius));
+            left: calc(50% - $size/2);
+        }
+
+        &__01 {
+            top: calc(50% - $size/2 - ($sin60 * $radius));
+            left: calc(50% - $size/2 + ($cos60 * $radius));
+        }
+
+        &__02 {
+            top: calc(50% - $size/2 - ($sin30 * $radius));
+            left: calc(50% - $size/2 + ($cos30 * $radius));
+        }
+
+        &__03 {
+            top: calc(50% - $size/2);
+            left: calc(50% - $size/2 + ($radius));
+        }
+
+        &__04 {
+            top: calc(50% - $size/2 + ($sin30 * $radius));
+            left: calc(50% - $size/2 + ($cos30 * $radius));
+        }
+
+        &__05 {
+            top: calc(50% - $size/2 + ($sin60 * $radius));
+            left: calc(50% - $size/2 + ($cos60 * $radius));
+        }
+
+        &__06 {
+            top: calc(50% - $size/2 + ($radius));
+            left: calc(50% - $size/2);
+        }
+
+        &__07 {
+            top: calc(50% - $size/2 + ($sin60 * $radius));
+            left: calc(50% - $size/2 - ($cos60 * $radius));
+        }
+
+        &__08 {
+            top: calc(50% - $size/2 + ($sin30 * $radius));
+            left: calc(50% - $size/2 - ($cos30 * $radius));
+        }
+
+        &__09 {
+            left: calc(50% - $size/2 - ($radius));
+            top: calc(50% - $size/2);
+        }
+
+        &__10 {
+            top: calc(50% - $size/2 - ($sin30 * $radius));
+            left: calc(50% - $size/2 - ($cos30 * $radius));
+        }
+
+        &__11 {
+            top: calc(50% - $size/2 - ($sin60 * $radius));
+            left: calc(50% - $size/2 - ($cos60 * $radius));
+        }
+    }
+    &__center {
+        width: 2rem;
+        height: 2rem;
+        background-color: brown;
+        position: absolute;
+        top: calc(50% - 1rem);
+        left: calc(50% - 1rem);
+        border-radius: 100%;
+    }
+
+    &__seconds-center {
+        width: 1rem;
+        height: 1rem;
+        border-radius: 100%;
+        background-color: black;
+        position: absolute;
+        top: calc(50% - 0.5rem);
+        left: calc(50% - 0.5rem);
+    }
+
+    &__brace {
+        &__seconds {
+            height: $braceSecondslength;
+            width: 0.2rem;
+            background-color: black;
+
+            position: absolute;
+            bottom: calc(50% - 2rem);
+            left: calc(50% - 0.2rem);
+
+            transform: rotate(0deg);
+            transform-origin: 0.1rem calc(100% - 2rem);
+        }
+
+        &__minutes {
+            height: $braceMinuteslength;
+            width: 0.4rem;
+            background-color: brown;
+
+            position: absolute;
+            bottom: calc(50% - 2rem);
+            left: calc(50% - 0.2rem);
+
+            transform: rotate(0deg);
+            transform-origin: 0.2rem calc(100% - 2rem);
+        }
+
+        &__hours {
+            height: $braceHourslength;
+            width: 0.6rem;
+            background-color: brown;
+
+            position: absolute;
+            bottom: calc(50% - 2rem);
+            left: calc(50% - 0.3rem);
+
+            transform: rotate(0deg);
+            transform-origin: 0.3rem calc(100% - 2rem);
+        }
+    }
+
+    .mark-container {
+        position: absolute;
+        bottom: 50%;
+        left: calc(50% - 0.2rem);
+        width: 0.4rem;
+        height: calc($radius + 0.2rem);
+        //background-color: aquamarine;
+        transform-origin: 0.2rem calc(100%);
+    }
+
+    .mark {
+        width: 100%;
+        height: 0.4rem;
+        border-radius: 100%;
+        background-color: darkslateblue;
+    }
+}
+
+.current {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2rem;
+    height: 5rem;
+    width: 100%;
+
+}
